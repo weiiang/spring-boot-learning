@@ -13,13 +13,13 @@ import reactor.core.publisher.Flux;
 public class SseController {
 	
 	public Flux<ServerSentEvent<Integer>> randomNumbers(){
-		 return Flux.interval(Duration.ofSeconds(1))
-	                .map(seq -> Tuples.of(seq, ThreadLocalRandom.current().nextInt()))
-	                .map(data -> ServerSentEvent.<Integer>builder()
-	                        .event("random")
-	                        .id(Long.toString(data.getT1()))
-	                        .data(data.getT2())
-	                        .build());
+//		 return Flux.interval(Duration.ofSeconds(1))
+//	                .map(seq -> Tuples.of(seq, ThreadLocalRandom.current().nextInt()))
+//	                .map(data -> ServerSentEvent.<Integer>builder()
+//	                        .event("random")
+//	                        .id(Long.toString(data.getT1()))
+//	                        .data(data.getT2())
+//	                        .build());
 	}
 
 }
